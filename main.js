@@ -65,14 +65,14 @@ function startFilterList(e) {
 
     e.preventDefault()
     if (!searchToggler) {
-        flag = !flag;
+        searchToggler = !searchToggler;
         BTN_SEARCH.textContent = "Zakończ szukanie"
         return INPUT.addEventListener('input', filterList)
     } else {
         INPUT.removeEventListener('input', filterList, false);
         BTN_SEARCH.textContent = "Zacznij szukanie"
         updateList()
-        return flag = !flag
+        return searchToggler = !searchToggler
 
     }
 }
