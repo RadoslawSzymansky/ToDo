@@ -79,6 +79,9 @@ function startFilterList(e) {
     }
 }
 // events
+INPUT.addEventListener("submit", e => {
+    e.preventDefault();
+});
 BTN_ADD.addEventListener("click", addToList);
 BTN_CLEAR.addEventListener("click", clearList);
 BTN_SEARCH.addEventListener("click", startFilterList);
