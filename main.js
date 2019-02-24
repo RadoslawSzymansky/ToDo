@@ -32,8 +32,12 @@ function updateList(array = list) {
 const addToList = e => {
     e.preventDefault();
     let task = INPUT.value;
-    if (!task || task.length < 5)
-        return alert("Zadanie musi sie skladac przynajmiej z 5 liter");
+    if (!task || task.length < 5 || task.length > 40) {
+        INPUT.value = "";
+        return alert(
+            "Zadanie musi sie skladac przynajmiej z 5 liter, i być nie dluzsze niz 40 liter"
+        );
+    }
     list.push(task);
     updateList();
     INPUT.value = "";
